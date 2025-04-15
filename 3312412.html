@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>생각공간 질문 흐름</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f9f8f4;
+      font-family: 'Noto Sans KR', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      text-align: center;
+    }
+    .question {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      min-height: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      background-color: #4b6584;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #3c4d66;
+    }
+    .answer {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #6b705c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="question" id="question">질문을 불러오는 중...</div>
+    <input type="text" id="input" style="display: none;" placeholder="여기에 입력해주세요">
+    <div class="answer" id="answer"></div>
+    <button onclick="nextQuestion()" id="nextBtn">다음 질문</button>
+  </div>
+
+  <script>
+    const questions = [
+      "오늘 미술관에는 어떻게 오셨나요?", // Q0 (입력)
+      "지금 이 전시장 안에 들어왔을 때, 가장 먼저 느낀 느낌을 형용사 하나로 말해준다면요?",
+      "잘 이해가 안 되는 작품을 오래 보고 있으면, 마음속에 어떤 느낌이 생기나요?",
+      "똑같은 모양이 계속 나오는 작품을 보면 어떤 기분이 드나요?",
+      "마음이 조용히 움직였던 순간이 있다면, 그때의 느낌은 어떤 형용사였을까요?",
+      "이제 미술관을 나간다고 생각했을 때, 마지막에 남는 느낌은 어떤 단어일까요?",
+      "💡 오늘의 감각 여정이 끝났습니다. 당신의 마음에 남은 단어들이 실처럼 이어지길 바랍니다."
+    ];
+
+    const threadColors = {
+      "버스": "파란색",
+      "자가용": "빨간색",
+      "차": "빨간색",
+      "도보": "초록색",
+      "걸어서": "초록색",
+      "자전거": "노란색",
+      "기차": "회색",
+      "KTX": "회색"
+    };
+
+    let index = 0;
+
+    function nextQuestion() {
+      const qBox = document.getElementById("question");
+      const input = document.getElementById("input");
+      const answerBox = document.getElementById("answer");
+
+      if (index === 0) {
+        // 첫 질문은 입력 필요
+        qBox.innerText = questions[index];
+        input.style.display = "inline-block";
+        input.value = "";
+        answerBox.innerText = "";
+        index++;
+        return;
+      }
+
+      if (index === 1) {
+        const response = document.getElementById("input").value.trim();
+        const color = getThreadColor(response);
+        const message = color
+          ? `→ ${response}로 오셨군요. ${color} 실을 사용해주세요.`
+          : "→ 이동 수단을 잘 모르겠어요. 흰색 실을 사용해주세요.";
+        answerBox.innerText = message;
+        input.style.display = "none";
+        index++;
+        return;
+      }
+
+      if (index < questions.length) {
+        qBox.innerText = questions[index];
+        answerBox.innerText = "";
+        index++;
+      } else {
+        qBox.innerText = "고맙습니다. 다시 시작하려면 페이지를 새로고침해주세요.";
+        document.getElementById("nextBtn").style.display = "none";
+      }
+    }
+
+    function getThreadColor(response) {
+      for (let key in threadColors) {
+        if (response.includes(key)) {
+          return threadColors[key];
+        }
+      }
+      return null;
+    }
+
+    // 시작할 때 자동 첫 질문
+    window.onload = nextQuestion;
+  </script>
+</body>
+</html>
