@@ -76,11 +76,11 @@ async function generateQuestion(id, prompt) {
 }
 
 function loadAllQuestions() {
-  generateQuestion("q3-text", prompts.h3);
-  generateQuestion("q4-text", prompts.h4);
-  generateQuestion("q5-text", prompts.h5);
-  generateQuestion("q6-text", prompts.h6);
-  generateQuestion("q7-text", prompts.h7);
+  generateQuestion("q3-text", prompts.question3);
+  generateQuestion("q4-text", prompts.question4);
+  generateQuestion("q5-text", prompts.question5);
+  generateQuestion("q6-text", prompts.question6);
+  generateQuestion("q7-text", prompts.question7);
 }
 
 function nextScreen(nextId) {
