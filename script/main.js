@@ -87,7 +87,7 @@ function nextScreen(nextId) {
   document.querySelectorAll('.screen').forEach(div => div.classList.remove('active'));
   document.getElementById(nextId).classList.add('active');
   
-  if (nextId === 'end') {
+  if (Id === 'end') {
     setupAutoRestart();
   }
 }
@@ -106,5 +106,5 @@ function restart() {
 function setupAutoRestart() {
   setTimeout(() => {
     restart();
-  }, 60000); // 60000ms = 1분
+  }, 10000); // 60000ms = 1분
 }
