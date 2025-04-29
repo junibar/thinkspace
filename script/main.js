@@ -86,6 +86,10 @@ function loadAllQuestions() {
 function nextScreen(nextId) {
   document.querySelectorAll('.screen').forEach(div => div.classList.remove('active'));
   document.getElementById(nextId).classList.add('active');
+  
+  if (nextId === 'end') {
+    setupAutoRestart();
+  }
 }
 
 function selectColor(colorName, colorHex) {
@@ -96,4 +100,11 @@ function selectColor(colorName, colorHex) {
 
 function restart() {
   nextScreen('intro');
+  loadAllQuestions();
+}
+
+function setupAutoRestart() {
+  setTimeout(() => {
+    restart();
+  }, 60000); // 60000ms = 1분
 }
