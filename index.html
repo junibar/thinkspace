@@ -13,8 +13,12 @@
     <p>미술관을 거닐며 마음에 남은 장면들을<br>짧은 질문들과 함께 따라가 보세요.</p>
     <button onclick="nextScreen('guide')">시작하기 ➔</button>
   </div>
-  <!-- 나머지 화면은 그대로 복사되며 질문 div들은 유지 -->
-  <!-- ... (중략 - 필요 시 확장 가능) -->
+  <div id="guide" class="screen">
+    <h2>🌿 참여 방법 안내</h2>
+    <p>전시를 알게 된 경로에 따라 실 색상이 정해집니다.<br>이후 질문마다 감상에 가장 가까운 단어를 찾아 실을 걸어주세요.<br>답변 입력은 필요하지 않습니다.</p>
+    <button onclick="nextScreen('question1')">질문 시작하기 ➔</button>
+  </div>
+
   <script src="script/main.js"></script>
 </body>
 </html>
