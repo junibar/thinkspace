@@ -1,8 +1,0 @@
-
-body { font-family: 'Noto Sans KR', sans-serif; text-align: center; background-color: #f8f8f8; margin: 0; padding: 0; }
-.screen { display: none; padding: 50px 20px; }
-.active { display: block; }
-button { margin-top: 30px; padding: 12px 24px; font-size: 16px; border: none; background-color: #4CAF50; color: white; border-radius: 8px; cursor: pointer; }
-button:hover { background-color: #45a049; }
-.small-text { font-size: 14px; color: #777; margin-top: 10px; }
-.color-block { width: 50px; height: 50px; display: inline-block; border-radius: 8px; margin-top: 20px; }
