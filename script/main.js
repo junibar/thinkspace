@@ -101,5 +101,4 @@ function setupAutoRestart() {
 
 function restart() {
   nextScreen('intro');
-  loadAllQuestions();
 }
