@@ -13,11 +13,32 @@
     <p>미술관을 거닐며 마음에 남은 장면들을<br>짧은 질문들과 함께 따라가 보세요.</p>
     <button onclick="nextScreen('guide')">시작하기 ➔</button>
   </div>
+  
   <div id="guide" class="screen">
     <h2>🌿 참여 방법 안내</h2>
     <p>전시를 알게 된 경로에 따라 실 색상이 정해집니다.<br>이후 질문마다 감상에 가장 가까운 단어를 찾아 실을 걸어주세요.<br>답변 입력은 필요하지 않습니다.</p>
     <button onclick="nextScreen('question1')">질문 시작하기 ➔</button>
   </div>
+
+  <div id="question1" class="screen">
+  <h2>🌿 질문 1</h2>
+  <p>당신의 오늘은 어떤 계기로 이 전시에 닿았나요?</p>
+  <div>
+    <button onclick="selectColor('빨강', '#FF4B4B')">SNS / 웹사이트</button><br>
+    <button onclick="selectColor('노랑', '#FFD93D')">지인 추천</button><br>
+    <button onclick="selectColor('파랑', '#3A86FF')">우연히 마주침</button><br>
+    <button onclick="selectColor('초록', '#80C904')">기사 / 잡지에서 접함</button><br>
+    <button onclick="selectColor('보라', '#9B5DE5')">전시 포스터 / 현수막</button><br>
+    <button onclick="selectColor('민트', '#00F5D4')">기타</button>
+  </div>
+</div>
+
+  <div id="question2" class="screen">
+  <h2>🌿 질문 2</h2>
+  <p>이번 전시를 관람하면서 당신의 마음을 가장 오래 붙잡은 순간은 어땠나요?</p>
+  <div class="small-text">답변은 입력하지 않아도 됩니다.</div>
+  <button onclick="nextScreen('question3')">다음 질문으로 ➔</button>
+</div>
 
   <script src="script/main.js"></script>
 </body>
