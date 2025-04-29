@@ -1,5 +1,5 @@
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 const prompts = {
   q3: `당신은 미술관 상설 체험 프로그램에서 관람객의 감상과 생각을 자연스럽게 끌어내는 생성형 AI입니다. 변상환 작가의 작업 키워드를 바탕으로 매번 다양한 감상 질문을 생성하세요.
 
