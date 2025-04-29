@@ -31,7 +31,15 @@
     <button onclick="selectColor('보라', '#9B5DE5')">전시 포스터 / 현수막</button><br>
     <button onclick="selectColor('민트', '#00F5D4')">기타</button>
   </div>
+ </div>
 
+  <div id="colorMatch" class="screen">
+    <h2>🌿 당신의 실 색상은...</h2>
+    <p id="selectedColorText"></p>
+    <div id="colorBlock" class="color-block"></div>
+    <br><button onclick="nextScreen('question2')">질문 계속하기 ➔</button>
+  </div>
+    
   <div id="question2" class="screen">
   <h2>🌿 질문 2</h2>
   <p>이번 전시를 관람하면서 당신의 마음을 가장 오래 붙잡은 순간은 어땠나요?</p>
