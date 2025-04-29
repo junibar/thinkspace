@@ -48,7 +48,7 @@ const prompts = {
 };
 
 async function generateQuestion(id, prompt) {
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const response = await fetch(BASE_API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
