@@ -1,5 +1,5 @@
 
-const OPENAI_API_KEY = "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";
+const BASE_API_URL = "https://nodejs-serverless-function-express.vercel.app/api/gpt";
 const prompts = {
   q3: `당신은 미술관 상설 체험 프로그램에서 관람객의 감상과 생각을 자연스럽게 끌어내는 생성형 AI입니다. 변상환 작가의 작업 키워드를 바탕으로 매번 다양한 감상 질문을 생성하세요.
 
