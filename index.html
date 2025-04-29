@@ -23,9 +23,23 @@
 <div id="question1" class="screen">
   <h2>🌿 질문 1</h2>
   <p>당신의 오늘은 어떤 계기로 이 전시에 닿았나요?</p>
-  <button onclick="nextScreen('question2')">다음 질문으로 ➔</button>
+  <div>
+    <button onclick="selectColor('빨강', '#FF4B4B')">SNS / 웹사이트</button><br>
+    <button onclick="selectColor('노랑', '#FFD93D')">지인 추천</button><br>
+    <button onclick="selectColor('파랑', '#3A86FF')">우연히 마주침</button><br>
+    <button onclick="selectColor('초록', '#80C904')">기사 / 잡지에서 접함</button><br>
+    <button onclick="selectColor('보라', '#9B5DE5')">전시 포스터 / 현수막</button><br>
+    <button onclick="selectColor('민트', '#00F5D4')">기타</button>
+  </div>
 </div>
 
+ <div id="colorMatch" class="screen">
+   <h2>🌿 당신의 실 색상은...</h2>
+   <p id="selectedColorText"></p>
+   <div id="colorBlock" class="color-block"></div>
+   <br><button onclick="nextScreen('question2')">질문 계속하기 ➔</button>
+ </div>
+  
 <div id="question2" class="screen">
   <h2>🌿 질문 2</h2>
   <p>이번 전시를 관람하면서 당신의 마음을 가장 오래 붙잡은 순간은 어땠나요?</p>
