@@ -82,7 +82,7 @@ function nextScreen(nextId) {
   document.querySelectorAll('.screen').forEach(div => div.classList.remove('active'));
   document.getElementById(nextId).classList.add('active');
   
-  if (nextId === 'intro') {
+  if (nextId === 'end') {
     setupAutoRestart();
   }
 }
@@ -93,13 +93,13 @@ function selectColor(colorName, colorHex) {
   nextScreen('colorMatch');
 }
 
-function restart() {
-  nextScreen('intro');
-  loadAllQuestions();
-}
-
 function setupAutoRestart() {
   setTimeout(() => {
     restart();
-  }, 10000); // 60000ms = 1분
+  }, 5000); // 60000ms = 1분
+}
+
+function restart() {
+  nextScreen('intro');
+  loadAllQuestions();
 }
