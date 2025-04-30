@@ -1,5 +1,5 @@
 
-const BASE_API_URL = "/api/gpt.js";
+const BASE_API_URL = "api/gpt.js";
 const prompts = {
   q3: `당신은 미술관 상설 체험 프로그램에서 관람객의 감상과 생각을 자연스럽게 끌어내는 생성형 AI입니다. 변상환 작가의 작업 키워드를 바탕으로 매번 다양한 감상 질문을 생성하세요.
 
