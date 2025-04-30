@@ -66,7 +66,7 @@ async function generateQuestion(id, prompt) {
 
   const data = await response.json();
   const text = data.choices?.[0]?.message?.content || "(질문을 생성할 수 없습니다)";
-  document.getElementById(id).innerText = generatedtext;
+  document.getElementById(id).innerText = text;
 }
 
 function loadAllQuestions() {
