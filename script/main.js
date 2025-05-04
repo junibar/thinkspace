@@ -47,7 +47,7 @@ const prompts = {
 - '형용사'라는 단어는 쓰지 않습니다.`
 };
 
-async function generateQuestion(id, prompt) {
+async function generateQuestion(id, prompts) {
   const response = await fetch(BASE_API_URL, {
     method: "POST",
     headers: {
