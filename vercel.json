@@ -2,11 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/next"
+      "src": "api/gpt.js",
+      "use": "@vercel/node"
     }
   ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key"
-  }
+  "routes": [
+    {
+      "src": "/api/gpt",
+      "dest": "api/gpt.js"
+    }
+  ]
 }
