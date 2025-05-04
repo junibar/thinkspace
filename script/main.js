@@ -57,7 +57,7 @@ async function generateQuestion(id, prompts) {
       model: "gpt-4",
       messages: [
         { role: "system", content: "너는 미술관 관객에게 감정과 생각을 이끌어내는 질문을 만드는 역할이야." },
-        { role: "user", content: prompt }
+        { role: "user", content: prompts }
       ],
       temperature: 0.7,
       max_tokens: 150
