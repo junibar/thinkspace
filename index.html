@@ -9,20 +9,20 @@
 <body>
 
 <div id="intro" class="screen active">
-  <h1>🌿 다시, 감상실</h1>
+  <h1>🧶 다시, 감상실</h1>
   <p>미술관을 거닐며 마음에 남은 장면들을<br>짧은 질문들과 함께 따라가 보세요.</p>
   <button onclick="nextScreen('guide')">시작하기 ➔</button>
 </div>
 
 <div id="guide" class="screen">
-  <h2>🌿 참여 방법 안내</h2>
+  <h2>📌 참여 방법 안내</h2>
   <p>전시를 알게 된 경로에 따라 당신이 사용할 실 색상이 정해집니다.<br>이후 질문마다 답변에 가장 가까운 단어를 선택해 실을 걸어주세요.<br>추가적인 입력은 필요하지 않습니다.<br><br>질문마다, 마음에 남은 감상에 따라 가장 가까운 단어에 실을 가볍게 걸어주세요.<br>
     마지막 대답의 기둥에는 실을 세 바퀴 감고 아래로 늘어뜨려주세요.</p>
   <button onclick="nextScreen('question1')">질문 시작하기 ➔</button>
 </div>
 
 <div id="question1" class="screen">
-  <h2>🌿 질문 1</h2>
+  <h2>🧵 전시와의 만남</h2>
   <p>당신의 오늘은 어떤 계기로 이 전시와 마주했나요?</p>
   <div>
     <button onclick="selectColor('빨강', '#FF4B4B')">SNS / 웹사이트</button><br>
@@ -35,56 +35,56 @@
 </div>
 
  <div id="colorMatch" class="screen">
-   <h2>🌿 당신의 실 색상은...</h2>
+   <h2>당신의 실 색상은...</h2>
    <p id="selectedColorText"></p>
    <div id="colorBlock" class="color-block"></div>
    <br><button onclick="nextScreen('question2')">질문 계속하기 ➔</button>
  </div>
   
 <div id="question2" class="screen">
-  <h2>🌿 질문 2</h2>
+  <h2>🧵 생각공간의 감상</h2>
   <p>이번 전시를 관람하면서 당신의 마음에 가장 깊게 남은 감상은 어땠나요?</p>
   <div class="small-text">답변은 입력하지 않아도 됩니다. 질문을 읽은 뒤, 가장 가까운 단어에 실을 걸어주세요.</div>
   <button onclick="nextScreen('question3')">다음 질문으로 ➔</button>
 </div>
 
 <div id="question3" class="screen">
-  <h2>🌿 변상환의 감각</h2>
+  <h2>🧵 변상환의 감각</h2>
   <p id="q3-text">반복되는 움직임 속에서 시간이 멈춘 듯이 느껴진 순간이 있나요? 그때의 마음은 어떤 감정이었나요?</p>
   <div class="small-text">가장 가까운 단어에 실을 걸어주세요.</div>
   <button onclick="nextScreen('question4')">다음 질문으로 ➔</button>
 </div>
 
 <div id="question4" class="screen">
-  <h2>🌿 안상훈의 감각</h2>
+  <h2>🧵� 안상훈의 감각</h2>
   <p id="q4-text">어긋난 대화나 시선 속에서, 마음이 살짝 멀어진 순간을 기억하나요? 그때 당신은 어떤 느낌을 받았나요?</p>
   <div class="small-text">가장 가까운 단어에 실을 걸어주세요.</div>
   <button onclick="nextScreen('question5')">다음 질문으로 ➔</button>
 </div>
 
 <div id="question5" class="screen">
-  <h2>🌿 이병호의 감각</h2>
+  <h2>🧵 이병호의 감각</h2>
   <p id="q5-text">소중했던 무언가를 잃고, 다시 만난 순간이 있나요? 그때의 감정은 어떤 느낌이었나요?</p>
   <div class="small-text">가장 가까운 단어에 실을 걸어주세요.</div>
   <button onclick="nextScreen('question6')">다음 질문으로 ➔</button>
 </div>
 
 <div id="question6" class="screen">
-  <h2>🌿 지희킴의 감각</h2>
+  <h2>🧵 지희킴의 감각</h2>
   <p id="q6-text">이전과 다른 새로운 환경과 마주했을 때, 그때의 감정은 어땠나요?</p>
   <div class="small-text">가장 가까운 단어에 실을 걸어주세요.</div>
   <button onclick="nextScreen('question7')">다음 질문으로 ➔</button>
 </div>
 
 <div id="question7" class="screen">
-  <h2>🌿 차승언의 감각</h2>
+  <h2>🧵 차승언의 감각</h2>
   <p id="q7-text">반복되는 하루 속, 예기치 않은 틈이 생긴 순간을 기억하나요? 그때의 느꼈던 기분은 어땠나요?</p>
   <div class="small-text">가장 가까운 단어에 실을 걸어주세요.</div>
   <button onclick="nextScreen('end')">감상 여정 마치기 ➔</button>
 </div>
 
 <div id="end" class="screen">
-  <h2>🌿 당신의 감상 여정이 완성되었습니다</h2>
+  <h2>🧵 당신의 감상 여정이 완성되었습니다</h2>
   <p>당신이 떠올린 감상들은 하나의 흐름이 되어 부드럽게 이어집니다.<br>다른 사람들의 감상 흐름도 함께 바라보세요.<br><br>잠시 후 처음 화면으로 돌아갑니다.</p>
   <button onclick="restart()">처음으로 돌아가기 ➔</button>
 </div>
