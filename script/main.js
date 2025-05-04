@@ -54,7 +54,7 @@ async function generateQuestion(id, prompt) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "gpt-3.5 turbo",
+      model: "gpt-4.0",
       messages: [
         { role: "system", content: "너는 미술관 관객에게 감정과 생각을 이끌어내는 질문을 만드는 역할이야." },
         { role: "user", content: prompt }
@@ -65,6 +65,8 @@ async function generateQuestion(id, prompt) {
   });
 
   const data = await response.json();
+  console.log("응답 결과:", data);
+  
   const text = data.choices?.[0]?.message?.content || "(질문을 생성할 수 없습니다)";
   document.getElementById(id).innerText = text;
 }
