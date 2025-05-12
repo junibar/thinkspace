@@ -3,10 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>다시, 감상실</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ 전체화면 및 모바일 최적화 meta 추가 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#000000"> <!-- 상태바 배경색 설정 (선택) -->
+
+  <!-- ✅ PWA용 manifest 연결 -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- 기존 스타일 -->
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
 
 <div id="intro" class="screen active">
   <h1>🧶 다시, 감상실</h1>
